@@ -346,6 +346,6 @@ const cookies = [
   },
 ]
 
-const todos = [...coffees, ...cappuccinos, ...cookies]
+export const todos = [...coffees, ...cappuccinos, ...cookies]
 
 export const options = [todos, coffees, cappuccinos, cookies]

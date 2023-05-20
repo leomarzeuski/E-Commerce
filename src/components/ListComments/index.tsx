@@ -8,14 +8,12 @@ const ListComments: React.FC = () => {
 
 
     useEffect(() => {
-        console.log(comments)
         getComments();
     }, [])
 
     const getComments = async () => {
         try {
             const response = await fetchComments();
-            console.log(response)
             setComments(response)
         } catch (error) {
             alert('algo deu errado')
@@ -32,7 +30,7 @@ const ListComments: React.FC = () => {
             email: string;
             body: string;
         }) => (
-            <CommentBox key={comment.postId} comments={comment} />
+            <CommentBox key={comment.id} comments={comment} />
         ))}
     </S.Container>
 }
